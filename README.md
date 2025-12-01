@@ -45,7 +45,7 @@ setup.bat
    - Select **"Bluetooth"**
 
 4. **Pair the device:**
-   - Your ESP32 device should appear in the list (e.g., "ESP32_BT" or similar)
+   - Your ESP32 device should appear in the list as **"ESP32_Actuator_Controller"**
    - Click on it to pair
    - If prompted for a PIN, enter it (common default: `1234` or `0000`)
    - Wait for "Connected" status
