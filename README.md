@@ -50,10 +50,15 @@ setup.bat
    - If prompted for a PIN, enter it (common default: `1234` or `0000`)
    - Wait for "Connected" status
 
-5. **Verify pairing:**
+5. **Verify pairing and find COM port:**
    - The device should now appear in your paired devices list
    - Windows will assign it a COM port (e.g., COM5, COM7)
-   - You can check the COM port in Device Manager → Ports (COM & LPT)
+   - **To find the COM port:**
+     - In Bluetooth settings, click **"More Bluetooth options"** (right sidebar or bottom of page)
+     - In the Bluetooth Settings window, click the **"COM Ports"** tab
+     - Look for your device (**ESP32_Actuator_Controller**) in the list
+     - Note the **Outgoing** COM port number (e.g., COM5) - this is what the app will connect to
+   - Alternatively, check in Device Manager → Ports (COM & LPT)
 
 **Note:** Once paired, the application will remember your device. You can use the **Settings** tab in the app to scan for and connect to your paired ESP32.
 
