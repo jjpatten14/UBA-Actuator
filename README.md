@@ -26,6 +26,44 @@ Run the setup script to create a virtual environment and install dependencies:
 setup.bat
 ```
 
+## Bluetooth Setup
+
+**Important:** You must pair your ESP32 Bluetooth device with Windows before the application can connect to it.
+
+### Pairing Instructions (Windows)
+
+1. **Enable Bluetooth** on your computer (if not already enabled)
+
+2. **Put your ESP32 device in pairing mode:**
+   - Power on the ESP32 device
+   - The device should automatically be discoverable (check your ESP32 documentation if needed)
+
+3. **Open Windows Bluetooth Settings:**
+   - Press `Windows + I` to open Settings
+   - Go to **Devices** → **Bluetooth & other devices**
+   - Click **"Add Bluetooth or other device"**
+   - Select **"Bluetooth"**
+
+4. **Pair the device:**
+   - Your ESP32 device should appear in the list (e.g., "ESP32_BT" or similar)
+   - Click on it to pair
+   - If prompted for a PIN, enter it (common default: `1234` or `0000`)
+   - Wait for "Connected" status
+
+5. **Verify pairing:**
+   - The device should now appear in your paired devices list
+   - Windows will assign it a COM port (e.g., COM5, COM7)
+   - You can check the COM port in Device Manager → Ports (COM & LPT)
+
+**Note:** Once paired, the application will remember your device. You can use the **Settings** tab in the app to scan for and connect to your paired ESP32.
+
+**Troubleshooting:**
+- If the device doesn't appear, ensure Bluetooth is enabled on both your computer and the ESP32
+- Try turning Bluetooth off and on again on your computer
+- Make sure the ESP32 is powered on and within range (~10 meters)
+
+**Linux Users:** Use `bluetoothctl` to pair Bluetooth devices. The process is similar - scan, pair, trust, and connect.
+
 ## Running the Application
 
 ```batch
